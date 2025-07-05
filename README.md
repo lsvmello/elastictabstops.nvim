@@ -16,8 +16,7 @@ Check `:help api-extended-marks` for more information about _extmarks_
 ```lua
 return {
  "lsvmello/elastictabstops.nvim",
- cmds = { "ElasticTabstopsEnable", "ElasticTabstopsDisable" },
- opts = {},
+ cmds = "ElasticTabstops",
 }
 ```
 
@@ -26,12 +25,11 @@ return {
 ```lua
 use {
  "lsvmello/elastictabstops.nvim",
- config = function() require('elastictabstops').setup() end
 }
 ```
 
+_There is no need to call `require("elastictabstops").setup()`
+
 ## Usage
 
-Execute `:ElasticTabstopsEnable` to enable elastic tabstops on the current buffer.
-
-Execute `:ElasticTabstopsDisable` to disable elastic tabstops on the current buffer.
+Execute `:ElasticTabstops` to toggle elastic tabstops on current buffer or explicitly call `:ElasticTabstops enable` or `:ElasticTabstops disable`.
